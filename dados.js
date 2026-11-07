@@ -16,9 +16,9 @@ const DADOS = {
 
   // Onde a pessoa está — o fuso faz o relógio "lá" funcionar
   destino: {
-    cidade: "Lisboa",
-    pais: "Portugal",
-    fuso: "Europe/Lisbon", // lista: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    cidade: "Goiânia",
+    pais: "Brasil",
+    fuso: "Brazil/West", // lista: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   },
 
   // Um recado por dia (rotaciona sozinho)
@@ -27,8 +27,7 @@ const DADOS = {
     "Cada dia que passa é um dia a menos até o nosso abraço.",
     "Se o céu tá bonito aí, saiba que daqui eu tô olhando o mesmo.",
     "Come direitinho, bebe água e me manda foto do almoço.",
-    "Tô guardando todas as histórias pra te contar pessoalmente.",
-    "A casa tá silenciosa demais sem a sua risada.",
+    "Tô guardando todas as histórias pra te contar no nosso próximo encontro.",
     "Distância é só um detalhe quando o coração tá no mesmo lugar.",
   ],
 
@@ -37,18 +36,18 @@ const DADOS = {
   // Se a foto não existir, aparece um cartão colorido no lugar.
   memorias: [
     {
-      data: "Março de 2023",
+      data: "Abril de 2026",
       titulo: "O dia em que tudo começou",
-      texto: "Lembra daquele café que esfriou porque a gente não parava de conversar?",
+      texto: "Lembra daquela festa que você me convidou e eu fui mesmo sem conhecer ninguém?",
       foto: "fotos/01.jpg",
-      emoji: "☕",
+      emoji: "🕺",
     },
     {
-      data: "Julho de 2023",
-      titulo: "Nossa primeira viagem",
-      texto: "A estrada, a playlist repetida mil vezes e você cantando errado de propósito.",
+      data: "Maio de 2026",
+      titulo: "Sua primeira visita na minha casa",
+      texto: "Eu não sabia de nada, mas ao mesmo tempo sabia de tudo. Ali algo me dizia que era você",
       foto: "fotos/02.jpg",
-      emoji: "🚗",
+      emoji: "🏡",
     },
     {
       data: "Dezembro de 2024",
