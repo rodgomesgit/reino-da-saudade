@@ -5,10 +5,10 @@
 
 const DADOS = {
   // Nome (ou apelido) de quem está viajando
-  nome: "Amor",
+  nome: "Vida",
 
   // Quem está com saudade (aparece nas assinaturas)
-  deQuem: "Eu",
+  deQuem: "Amor",
 
   // Datas da viagem (formato AAAA-MM-DDTHH:MM)
   partida: "2026-11-01T08:00",
