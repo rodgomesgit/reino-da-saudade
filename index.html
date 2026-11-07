@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claudin</title>
+  <meta name="description" content="Um cantinho pra matar a saudade." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💛</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ceu" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="sobre">um cantinho pra matar a saudade</p>
+    <h1>Oi, <span id="nome"></span> <span class="coracao">💛</span></h1>
+    <p class="recado" id="recado"></p>
+
+    <div class="contagem" aria-live="polite">
+      <p class="rotulo">falta pouquinho pro abraço</p>
+      <div class="numeros">
+        <div><span id="dias">0</span><small>dias</small></div>
+        <div><span id="horas">0</span><small>horas</small></div>
+        <div><span id="minutos">0</span><small>min</small></div>
+        <div><span id="segundos">0</span><small>seg</small></div>
+      </div>
+      <div class="barra" role="progressbar" aria-label="Progresso da viagem">
+        <div class="avancou" id="progresso"></div>
+        <span class="aviao" id="aviao">✈️</span>
+      </div>
+      <p class="legenda" id="legenda"></p>
+    </div>
+
+    <div class="la">
+      <div>
+        <small>aqui agora</small>
+        <strong id="horaAqui">--:--</strong>
+      </div>
+      <div class="separador">·</div>
+      <div>
+        <small id="lugarLa">lá agora</small>
+        <strong id="horaLa">--:--</strong>
+      </div>
+    </div>
+    <p class="estado" id="estado"></p>
+  </header>
+
+  <main>
+    <section id="memorias">
+      <h2>Nossas memórias</h2>
+      <p class="sub">pra lembrar que a gente já viveu tanta coisa boa — e ainda vai viver mais</p>
+      <ol class="linha" id="linha"></ol>
+    </section>
+
+    <section id="cartas">
+      <h2>Abra quando…</h2>
+      <p class="sub">cartinhas pra cada momento</p>
+      <div class="envelopes" id="envelopes"></div>
+    </section>
+
+    <section id="pote">
+      <h2>Pote de motivos</h2>
+      <p class="sub">tira um papelzinho</p>
+      <button class="pote" id="botaoPote" aria-label="Tirar um motivo do pote">🫙</button>
+      <p class="motivo" id="motivo">Toca no pote 👆</p>
+    </section>
+
+    <section id="abraco">
+      <h2>Abraço de emergência</h2>
+      <p class="sub">segura o botão pelo tempo que precisar</p>
+      <button class="abraco" id="botaoAbraco">🤗 segurar abraço</button>
+      <p class="contador-abraco" id="contadorAbraco"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>feito com saudade por <span id="deQuem"></span></p>
+  </footer>
+
+  <dialog id="carta">
+    <article class="papel">
+      <p class="cabecalho" id="cartaTitulo"></p>
+      <p class="corpo" id="cartaTexto"></p>
+      <p class="assinatura" id="cartaAssinatura"></p>
+      <button class="fechar" id="fecharCarta">guardar carta</button>
+    </article>
+  </dialog>
+
+  <script src="dados.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
