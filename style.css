@@ -12,7 +12,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --fundo: #1f1824;
     --fundo-2: #2a2130;
     --papel: #322839;
@@ -23,6 +24,19 @@
     --rosa: #d48d9a;
     --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+    --fundo: #1f1824;
+    --fundo-2: #2a2130;
+    --papel: #322839;
+    --tinta: #f4e7da;
+    --tinta-suave: #bba79a;
+    --acento: #f0a07a;
+    --acento-2: #f5cd7d;
+    --rosa: #d48d9a;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 * { box-sizing: border-box; }
@@ -36,6 +50,8 @@ body {
   background: linear-gradient(180deg, var(--fundo), var(--fundo-2));
   min-height: 100vh;
   line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
   overflow-x: hidden;
 }
 
@@ -55,7 +71,7 @@ h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; margin: 0; }
 .hero {
   max-width: 760px;
   margin: 0 auto;
-  padding: 64px 16px 40px;
+  padding-block: 64px 40px;
   text-align: center;
 }
 
@@ -145,7 +161,7 @@ h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; margin: 0; }
 .estado { font-family: "Caveat", cursive; font-size: 1.35rem; margin: 8px 0 0; }
 
 /* ---------- Seções ---------- */
-main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+main { max-width: 760px; margin: 0 auto; }
 section { padding: 48px 0; text-align: center; }
 section h2 { font-size: clamp(1.7rem, 5vw, 2.3rem); }
 .sub {
@@ -169,11 +185,8 @@ section h2 { font-size: clamp(1.7rem, 5vw, 2.3rem); }
   gap: 20px;
   align-items: center;
   text-align: left;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.memoria.visivel { opacity: 1; transform: none; }
+.memoria > div { min-width: 0; }
 .memoria:nth-child(even) .polaroid { order: 2; }
 
 .polaroid {
@@ -366,7 +379,7 @@ dialog[open] .papel { animation: abrir 0.45s ease; }
 
 footer {
   text-align: center;
-  padding: 40px 16px 56px;
+  padding-block: 40px 56px;
   font-family: "Caveat", cursive;
   font-size: 1.35rem;
   color: var(--tinta-suave);
@@ -374,7 +387,7 @@ footer {
 
 /* ---------- Celular ---------- */
 @media (max-width: 600px) {
-  .hero { padding-top: 44px; }
+  .hero { padding-block-start: 44px; }
   .memoria { grid-template-columns: 1fr; }
   .memoria:nth-child(even) .polaroid { order: 0; }
   .polaroid { width: 100%; max-width: 280px; margin: 0 auto; }
@@ -383,5 +396,4 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .memoria { opacity: 1; transform: none; }
 }

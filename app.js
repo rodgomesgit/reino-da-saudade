@@ -95,18 +95,6 @@
     linha.appendChild(li);
   });
 
-  const observador = new IntersectionObserver(
-    (entradas) =>
-      entradas.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add("visivel");
-          observador.unobserve(e.target);
-        }
-      }),
-    { threshold: 0.2 }
-  );
-  document.querySelectorAll(".memoria").forEach((el) => observador.observe(el));
-
   // ---------- Cartas ----------
   const lerLidas = () => {
     try { return JSON.parse(localStorage.getItem("cantinho-lidas") || "[]"); } catch { return []; }
