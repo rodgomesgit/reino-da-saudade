@@ -1,5 +1,5 @@
 // ============================================================
-//  CANTINHO DA SAUDADE — tudo o que você precisa editar está aqui 💛
+//  REINO DA SAUDADE — tudo o que você precisa editar está aqui 💛
 //  Troque os textos, datas e fotos. Não precisa mexer no resto.
 // ============================================================
 
