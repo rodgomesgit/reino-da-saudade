@@ -8,7 +8,7 @@
   $("nome").textContent = D.nome;
   $("deQuem").textContent = D.deQuem;
   $("lugarLa").textContent = `em ${D.destino.cidade}`;
-  document.title = `Claudin · saudade de ${D.nome}`;
+  document.title = `Cantinho da Saudade · ${D.nome}`;
 
   // Recado do dia: muda a cada dia, igual pra todo mundo naquele dia
   const diaDoAno = Math.floor(Date.now() / 86400000);
@@ -109,10 +109,10 @@
 
   // ---------- Cartas ----------
   const lerLidas = () => {
-    try { return JSON.parse(localStorage.getItem("claudin-lidas") || "[]"); } catch { return []; }
+    try { return JSON.parse(localStorage.getItem("cantinho-lidas") || "[]"); } catch { return []; }
   };
   const salvarLidas = (l) => {
-    try { localStorage.setItem("claudin-lidas", JSON.stringify(l)); } catch {}
+    try { localStorage.setItem("cantinho-lidas", JSON.stringify(l)); } catch {}
   };
   const lidas = new Set(lerLidas());
   const dialogo = $("carta");
